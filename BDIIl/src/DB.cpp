@@ -6,39 +6,56 @@ DB::DB()
 
 void DB::insertar(Producto P)
 {
-   string dato;
-   dato = P.codigo+" "+P.p_venta+" "+P.stock;
-   archivo.open("productos.txt");
+   archivo.open("productos.txt",ios::app);
    while(!archivo.eof()){
-    archivo<<dato;
+    archivo<<P.codigo+" "+P.p_venta+" "+P.stock;
    }
    archivo.close();
 }
-
-
-/*void DB:seleccionar()
+void DB::seleccionar()
 {
-
-}
-void DB::visualizar(){
-    string STRING;
+    string busqueda;
+    cout<<"Digite su producto a seleccionar:";cin>>busqueda;
+    bool encontrado = false;
     archivo.open("productos.txt");
-        while(!archivo.eof()){
-	        getline(archivo,STRING);
-	        cout<<STRING<<endl;
+    while(!archivo.eof())
+    {
+        archivo>>texto;
+        if(texto==busqueda){
+            encontrado = true;
+
         }
-	archivo.close();
-}
-
-
-string ingresados[3];
-    string ingresar[3] = {"Ingrese el codigo", "Ingrese el precio de venta", "Ingrese el stock"};
-        for(int i=0;i<3;i++){
-        cout<<ingresar[i]<<endl;
-        cin>>ingresados[i];
-}
-    cout<<" "<<endl;
-    for(int a=0;a<3;a++){
-        cout<<ingresados[a]<<endl;
+        archivo>>texto;
     }
-    */
+}
+
+void DB::eliminar()
+{
+    archivo.open("productos.txt");
+    archivo2.open("removidos.txt");
+    string eliminar;
+    cout<<"Digite su producto a eliminar:";cin>>eliminar;
+    bool encontrado = false;
+
+    while(!archivo.eof())
+    {
+        archivo>>texto;
+        if(texto==eliminar){
+            encontrado = true;
+            //Imprimimos lo que vamos a eliminar
+            cout<<"Eliminado";
+        }
+        else
+        {
+           archivo2;
+        }
+        archivo>>texto;
+    }
+    if(encontrado=false){
+        cout<<"No se encontro su producto";
+    }
+    archivo.close();
+    archivo2.close();
+    remove("productos.txt");
+    rename("productos2.txt","productos.txt");
+}

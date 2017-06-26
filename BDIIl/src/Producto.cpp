@@ -5,11 +5,17 @@ Producto::Producto(){
 	this->p_venta = " ";
 	this->stock = " ";
 }
-Producto::Producto(Producto &P)
+Producto::Producto(const Producto &P)
 {
-    P.codigo=" ";
-    P.p_venta=" ";
-    P.stock=" ";
+    codigo = P.codigo;
+    p_venta = P.p_venta;
+    stock = P.stock;
+}
+Producto::Producto(string codigo,string p_venta,string stock)
+{
+    codigo = codigo;
+    p_venta = p_venta;
+    stock = stock;
 }
 /*
 

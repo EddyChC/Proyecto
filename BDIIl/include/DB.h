@@ -9,16 +9,18 @@
 class DB{
 protected:
     Producto P;
+    string texto;
 public:
     DB();
     //vector<Producto> productitos;
     fstream archivo;
+    fstream archivo2;
     void insertar(Producto P);
-    /*void seleccionar();
+    void seleccionar();
     void eliminar();
     void actualizar();
     void visualizar();
-    void consultar();*/
+    void consultar();
 
 };
 

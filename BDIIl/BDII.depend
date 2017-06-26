@@ -101,12 +101,12 @@
 	<stdlib.h>
 	<string>
 
-1498423953 c:\users\user\documents\bd\final-project\bdiil\include\producto.h
+1498443156 c:\users\user\documents\bd\final-project\bdiil\include\producto.h
 	<iostream>
 	<string>
 	<fstream>
 
-1498424529 c:\users\user\documents\bd\final-project\bdiil\include\db.h
+1498434503 c:\users\user\documents\bd\final-project\bdiil\include\db.h
 	"Producto.h"
 	"Ask.h"
 	<vector>
@@ -136,9 +136,9 @@
 	<string>
 	<iostream>
 
-1498424262 source:c:\users\user\documents\bd\final-project\bdiil\src\db.cpp
+1498434626 source:c:\users\user\documents\bd\final-project\bdiil\src\db.cpp
 	"DB.h"
 
-1498424000 source:c:\users\user\documents\bd\final-project\bdiil\src\producto.cpp
+1498443156 source:c:\users\user\documents\bd\final-project\bdiil\src\producto.cpp
 	"Producto.h"
 

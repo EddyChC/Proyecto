@@ -24,6 +24,7 @@ int main()
     //a.visualizar();
     DB c;
     c.insertar(a);
+    c.seleccionar();
 
 
     system("productos.txt");

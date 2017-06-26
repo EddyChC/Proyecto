@@ -14,7 +14,8 @@ public:
 
 public:
 	Producto();
-	Producto(Producto &P);
+	Producto(const Producto &P);
+	Producto(string,string,string);
 	string getCodigo();
     string getPventa();
 	string getStock();
